@@ -1,12 +1,11 @@
-import { Controller, Get, Post, Put, Delete, Body, Req, Res } from '@nestjs/common';
-import { CreateLogDto } from './dto/create-divelogs-dto';
-import { Request, Response } from 'express';
+import { Controller, Get, Post, Put, Delete, Body } from '@nestjs/common';
+import { CreateLogDto } from './dto/create-dive-log-dto';
 
 @Controller('dives')
 export class DivesController {
   @Get()
-  findAll(@Req() req: Request, @Res() res: Response): string {
-    return 'Get all logs';
+  findAll(): string {
+    return 'Get all Logs';
   }
 
   @Post()
@@ -14,15 +13,13 @@ export class DivesController {
     return `Name: ${createLogDto.name} Desc: ${createLogDto.location}`;
   }
 
-  @Put()
-  edit(): string {
-    return '';
-  }
+  // @Put()
+  // edit(): string {
+  //   return '';
+  // }
 
-  @Delete()
-  delete(): string {
-    return '';
-  }
+  // @Delete()
+  // delete(): string {
+  //   return '';
+  // }
 }
-
-
