@@ -23,8 +23,8 @@ export class DivesController {
   //   return '';
   // }
 
-  // @Delete()
-  // delete(): string {
-  //   return '';
-  // }
+  @Delete(':id')
+  delete(@Param('id') id): string {
+    return `Delete ${id}`;
+  }
 }
