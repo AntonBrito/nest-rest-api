@@ -4,11 +4,11 @@ import { Controller, Get, Post } from '@nestjs/common';
 export class DivesController {
   @Get()
   findAll(): string {
-    return 'Get all log'
+    return 'Get all logs';
   }
 
   @Post()
   create(): string  {
-    return 'Create Divelogs'
+    return 'Create Divelogs';
   }
 }
