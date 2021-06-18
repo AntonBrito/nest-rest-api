@@ -10,7 +10,7 @@ export class DivesController {
 
   @Post()
   create(@Body() createLogDto: CreateLogDto): string {
-    return `Name: ${createLogDto.name} Desc: ${createLogDto.location}`;
+    return `Name: ${createLogDto.name} location: ${createLogDto.location}`;
   }
 
   // @Put()
