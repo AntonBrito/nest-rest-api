@@ -18,13 +18,13 @@ export class DivesController {
     return `Name: ${createLogDto.name} location: ${createLogDto.location}`;
   }
 
-  // @Put()
-  // edit(): string {
-  //   return '';
-  // }
-
   @Delete(':id')
   delete(@Param('id') id): string {
     return `Delete ${id}`;
+  }
+
+  @Put(':id')
+  update(@Body() updateLogDto: CreateLogDto, @Param('id') id): string {
+    return `Update ${id} - Name: ${updateLogDto.name}`;
   }
 }
