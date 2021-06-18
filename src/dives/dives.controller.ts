@@ -5,7 +5,7 @@ import { Request, Response } from 'express';
 @Controller('dives')
 export class DivesController {
   @Get()
-  findAll(): string {
+  findAll(@Req() req: Request, @Res() res: Response): string {
     return 'Get all logs';
   }
 
