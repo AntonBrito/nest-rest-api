@@ -21,4 +21,8 @@ export class DivesService {
   findAll(): Dive[] {
     return this.dives;
   }
+
+  finOne(id: string): Dive {
+    return this.dives.find(dive => dive.id === id);
+  }
 }
