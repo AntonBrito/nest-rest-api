@@ -1,8 +1,19 @@
-import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
-import { CreateLogDto } from './dto/create-dive-log-dto';
+import { 
+  Controller,
+  Get,
+  Post, 
+  Put, 
+  Delete, 
+  Body, 
+  Param 
+} from '@nestjs/common';
+import { CreateDiveDto } from './dto/create-dive-log-dto';
+import { DivesService } from './dives.service';
+import { Dive } from "./interfaces/dive.interface";
 
 @Controller('dives')
 export class DivesController {
+  constructor(private readonly divesService: DivesService) {}
   @Get()
   findAll(): string {
     return 'Get all Logs';
@@ -14,8 +25,8 @@ export class DivesController {
   }
 
   @Post()
-  create(@Body() createLogDto: CreateLogDto): string {
-    return `Name: ${createLogDto.name} location: ${createLogDto.location}`;
+  create(@Body() createDiveDto: CreateDiveDto): string {
+    return `Name: ${createDiveDto.name} location: ${createDiveDto.location}`;
   }
 
   @Delete(':id')
@@ -24,7 +35,7 @@ export class DivesController {
   }
 
   @Put(':id')
-  update(@Body() updateLogDto: CreateLogDto, @Param('id') id): string {
-    return `Update ${id} - Name: ${updateLogDto.name}`;
+  update(@Body() updateDiveDto: CreateDiveDto, @Param('id') id): string {
+    return `Update ${id} - Name: ${updateDiveDto.name}`;
   }
 }
