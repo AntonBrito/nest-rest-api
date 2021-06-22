@@ -1,15 +1,16 @@
-import { 
+import {
   Controller,
   Get,
-  Post, 
-  Put, 
-  Delete, 
-  Body, 
+  Post,
+  Put,
+  Delete,
+  Body,
   Param 
 } from '@nestjs/common';
 import { CreateDiveDto } from './dto/create-dive-log-dto';
 import { DivesService } from './dives.service';
 import { Dive } from "./interfaces/dive.interface";
+// import { threadId } from 'worker_threads';
 
 @Controller('dives')
 export class DivesController {
@@ -20,8 +21,9 @@ export class DivesController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id): string {
-    return `DiveLog ${id}`;
+  findOne(@Param('id') id): Dive {
+    // this.divesService.findOne(id)
+    return this.findOne(id);
   }
 
   @Post()
