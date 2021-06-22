@@ -15,8 +15,8 @@ import { Dive } from "./interfaces/dive.interface";
 export class DivesController {
   constructor(private readonly divesService: DivesService) {}
   @Get()
-  findAll(): string {
-    return 'Get all Logs';
+  findAll(): {} {
+    return this.divesService.findAll();
   }
 
   @Get(':id')
