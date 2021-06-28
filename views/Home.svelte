@@ -1,16 +1,15 @@
 <script>
-  import Layout from  './Layout/svelte';
-  export let message
+import { log }from 'console';
+import Layout from  './Layout.svelte';
 </script>
-<svelte:head>
-  <title>Home</title>
-</svelte:head>
+
+
 <Layout>
-  <h1>{message}</h1>
+  <!-- Add Dive here -->
 </Layout>
 
 <style>
   h1 {
-    color: purple;
+    color: black;
   }
-  </style>
+</style>
