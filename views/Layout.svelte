@@ -46,6 +46,6 @@ h1 {
 }
 
 h3 {
-  color: blue;
+  color: #204f6e
 }
 </style>
