@@ -4,19 +4,10 @@ const { default: Home }=require("./Home.svelte");
 </script>
 <div class="navbar bg-primary">
   <h1>ScubaLog</h1>
-  <!-- <nav>
-    <ul>
-      <a class=""src="About">About</a>
-    </ul>
-  </nav> -->
+  
 </div>
 
-
 <style>
-  /* h1 {
-    text-align: center;
-  } */
-
   .navbar {
   display: flex;
   justify-content: space-between;
