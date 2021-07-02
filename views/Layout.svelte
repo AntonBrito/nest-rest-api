@@ -3,7 +3,7 @@
   
   let name = "Anton Diver1";
   let location = "Jamestown, RI"
-  let dives = 30;
+  let depth = 30;
   
 </script>
 
@@ -23,15 +23,15 @@
     <main>
       <h1>{name}</h1>
       <h3>{location}</h3>
-      <h3>{dives}</h3>
+      <h3>{depth}</h3>
     </main>
   </body>
 </html>
 
 <style>
-  :global(body) {
-    background-color: white;
-  }
+  /* :global(body) {
+    background-color: #fff;
+  } */
 
   body {
   font-family: 'Roboto', sans-serif;
@@ -46,6 +46,6 @@ h1 {
 }
 
 h3 {
-  color: #204f6e
+  color: #204f6e;
 }
 </style>
