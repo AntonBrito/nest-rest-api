@@ -7,7 +7,7 @@ const { default: Home }=require("./Home.svelte");
   
 </div>
 
-<style>
+<style> 
   .navbar {
   display: flex;
   justify-content: space-between;

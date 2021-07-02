@@ -7,5 +7,4 @@ export class AppController {
   getHello() {
     return {};
   }
-
 }

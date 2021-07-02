@@ -1,10 +1,25 @@
 <script>
   import Nav from './Nav.svelte';
-  
-  let name = "Anton Diver1";
-  let location = "Jamestown, RI"
-  let depth = 30;
-  
+  import Diver from './Diver.svelte';
+
+  let divers = [
+		{
+			name: "Anton",
+			location: "KeyWest, FL",
+			depths: 12,
+		},
+		{
+			name: "Riley",
+			location: "CapCod, RI",
+			depths: 20,
+		},
+		{
+			name: "Belmas",
+			location: "Prainha, CapeVerde",
+			depths: 12,
+		}
+	];
+
 </script>
 
 <!doctype html>
@@ -20,18 +35,19 @@
     <header>
       <Nav />
     </header>
-    <main>
-      <h1>{name}</h1>
-      <h3>{location}</h3>
-      <h3>{depth}</h3>
-    </main>
-  </body>
+    <div class="container">
+      {#if divers.length === 0}
+      <p>No Divers</p>
+      {:else}
+      {#each divers as diver}
+      <Diver name={diver.name} location={diver.location} depth={diver.depths} />
+      {/each}
+      {/if}
+    </div>
+  </body> 
 </html>
 
 <style>
-  /* :global(body) {
-    background-color: #fff;
-  } */
 
   body {
   font-family: 'Roboto', sans-serif;
@@ -41,11 +57,4 @@
   color: #333;
 }
 
-h1 {
-  color: black;
-}
-
-h3 {
-  color: #204f6e;
-}
 </style>
