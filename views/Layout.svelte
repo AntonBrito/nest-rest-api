@@ -1,5 +1,10 @@
 <script>
   import Nav from './Nav.svelte';
+  
+  let name = "Anton Diver1";
+  let location = "Jamestown, RI"
+  let dives = 30;
+  
 </script>
 
 <!doctype html>
@@ -16,7 +21,9 @@
       <Nav />
     </header>
     <main>
-     
+      <h1>{name}</h1>
+      <h3>{location}</h3>
+      <h3>{dives}</h3>
     </main>
   </body>
 </html>
@@ -25,4 +32,20 @@
   :global(body) {
     background-color: white;
   }
+
+  body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+h1 {
+  color: black;
+}
+
+h3 {
+  color: blue;
+}
 </style>
