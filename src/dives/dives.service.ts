@@ -22,7 +22,7 @@ export class DivesService {
     return this.dives;
   }
 
-  finOne(id: string): Dive {
+  findOne(id: string): Dive {
     return this.dives.find(dive => dive.id === id);
   }
 }
