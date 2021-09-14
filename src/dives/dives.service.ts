@@ -5,15 +5,15 @@ import { Dive } from './interfaces/dive.interface';
 export class DivesService {
   private readonly dives: Dive[] = [
     {
-      id: "5938395976",
-      name: "John Duatez",
-      location: "KeyWest",
+      id: '5938395976',
+      name: 'John Duatez',
+      location: 'KeyWest',
       depth: 10,
     },
     {
-      id: "4254657853",
-      name: "Ally Brito",
-      location: "Capeverde",
+      id: '4254657853',
+      name: 'Ally Brito',
+      location: 'Capeverde',
       depth: 25,
     },
   ];
