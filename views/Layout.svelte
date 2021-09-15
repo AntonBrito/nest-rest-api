@@ -1,22 +1,22 @@
 <script>
   import Nav from './Nav.svelte';
-  import Diver from './Diver.svelte';
+  import Dive from './Dive.svelte';
 
-  let divers = [
+  let dives = [
 		{
 			name: "Anton",
 			location: "KeyWest, FL",
-			depths: 12,
+			depth: 12,
 		},
 		{
 			name: "Riley",
 			location: "CapCod, RI",
-			depths: 20,
+			depth: 20,
 		},
 		{
 			name: "Belmas",
 			location: "Prainha, CapeVerde",
-			depths: 12,
+			depth: 12,
 		}
 	];
 
@@ -36,11 +36,11 @@
       <Nav />
     </header>
     <div class="container">
-      {#if divers.length === 0}
+      {#if dives.length === 0}
       <p>No Divers</p>
       {:else}
-      {#each divers as diver}
-      <Diver name={diver.name} location={diver.location} depth={diver.depths} />
+      {#each dives as dive}
+      <Dive name={dive.name} location={dive.location} depth={dive.depth} />
       {/each}
       {/if}
     </div>

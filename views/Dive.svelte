@@ -1,14 +1,14 @@
 <script>
  export let name;
  export let location;
- export let depths;
+ export let depth;
 
 </script>
 
       <div class="card">
         <h1>{name}</h1>
         <h3>{location}</h3>
-        <h3>{depths}</h3>
+        <h3>{depth}</h3>
     </div>
   
 <style>
