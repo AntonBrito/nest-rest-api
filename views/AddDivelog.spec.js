@@ -8,5 +8,11 @@ describe('AddDiveLog', () => {
       const header = screen.getByRole('heading', { name: 'Add DiveLog' });
       expect(header).toBeInTheDocument();
     });
+    it("has a add name input", () => {
+      const { container } = ("Name");
+      const input = container.querySelector("input");
+      expect(input).toBeInTheDocument();
+      expect(container.querySelectorAll('input').length).toBe(2);
+    });
   });
 });
