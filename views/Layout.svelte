@@ -1,6 +1,7 @@
 <script>
   import Nav from './Nav.svelte';
   import Dive from './Dive.svelte';
+  import AddDivelog from './AddDivelog.svelte';
 
   let dives = [
 		{
@@ -35,6 +36,7 @@
     <header>
       <Nav />
     </header>
+    <AddDivelog />
     <div class="container">
       {#if dives.length === 0}
       <p>No Divers</p>
