@@ -1,7 +1,7 @@
 <script>
   import Nav from './Nav.svelte';
   import Dive from './Dive.svelte';
-  import AddDivelog from './AddDivelog.svelte';
+  import AddDiveLog from './AddDiveLog.svelte';
 
   let dives = [
 		{
@@ -34,9 +34,9 @@
   </head>
   <body>
     <header>
-      <Nav />
+    <Nav />
     </header>
-    <AddDivelog />
+    <AddDiveLog />
     <div class="container">
       {#if dives.length === 0}
       <p>No Divers</p>
@@ -51,12 +51,20 @@
 
 <style>
 
-  body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+body {
+  
+	color: #333;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to top right, #38f79f, #19afc7);
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+
+@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	}
 
 </style>
