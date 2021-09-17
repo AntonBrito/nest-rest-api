@@ -7,7 +7,4 @@ import Layout from  './Layout.svelte';
 
 </Layout>
 <style>
-
-
-  
 </style>
